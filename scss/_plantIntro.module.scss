@@ -1,0 +1,88 @@
+@use "@/scss/base/variables" as v;
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  padding: 0 v.$layout-spacing;
+  display: flex;
+  overflow: hidden;
+
+  .wrap {
+    width: calc(100% / 3);
+    display: flex;
+    padding: 3rem 0;
+
+    &.title {
+      flex-direction: column;
+      justify-content: space-between;
+
+      .content {
+        font-size: 50px;
+        margin-top: 7rem;
+
+        h1 {
+          color: v.$main-green;
+        }
+      }
+
+      .social {
+        font-size: 20px;
+
+        svg {
+          margin-right: 1rem;
+        }
+      }
+    }
+
+    &.plantBg {
+      background: linear-gradient(#f3f3f3 90%, #fff);
+      align-items: flex-end;
+      color: transparent;
+      position: relative;
+      user-select: none;
+      padding: 0;
+
+      .content {
+        position: absolute;
+        padding-bottom: 3rem;
+        box-sizing: border-box;
+      }
+
+      img {
+        width: 100%;
+        transform: scale(1.2);
+        height: auto;
+      }
+    }
+
+    &.subTitle {
+      align-items: flex-end;
+
+      .content {
+        padding: 0 0 0 2rem;
+        width: 100%;
+        font-size: v.$medium-size;
+
+        .news {
+          color: v.$main-green;
+          font-weight: bold;
+        }
+
+        .newTitle {
+          margin-bottom: 0.8rem;
+        }
+
+        .shopNow {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          margin-top: 2rem;
+
+          &:hover {
+            color: v.$main-green;
+          }
+        }
+      }
+    }
+  }
+}
