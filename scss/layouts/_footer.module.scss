@@ -1,0 +1,6 @@
+@use "../base/variables" as v;
+
+.container {
+    border-top: 1px solid #dcdcdc;
+    padding: 2rem v.$layout-spacing;
+}
