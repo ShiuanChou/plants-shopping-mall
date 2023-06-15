@@ -1,0 +1,102 @@
+@use "@/scss/base/variables" as v;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: auto;
+  padding: 1rem v.$layout-spacing;
+  margin: 5rem 0;
+
+  .wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .mainTitle {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 2rem 0;
+  }
+}
+
+.productCard {
+  display: flex;
+  justify-content: space-between;
+  background: v.$light-gray;
+  padding: 1rem;
+  margin: 0.5rem;
+  min-width: calc(33% - 1rem);
+  width: calc(33% - 1rem);
+  overflow: hidden;
+  height: 200px;
+
+  &.productCard:hover .plantImg > img {
+    transform: scale(1);
+    top: 0;
+  }
+
+  .plantImg {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+
+    img {
+      transition: all 0.5s ease-out;
+      position: absolute;
+      height: 100%;
+      transform: scale(1.2);
+      top: 20px;
+    }
+  }
+
+  .content {
+    margin-left: 2rem;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    .news {
+      color: v.$main-green;
+      font-weight: bold;
+      width: 60px;
+      font-size: 12px;
+      margin-bottom: 3px;
+    }
+
+    .price {
+      margin: 0.1rem 0 0.8rem 0;
+      color: #868686;
+    }
+  }
+}
+
+.addToBag {
+  background: v.$light-green;
+  border: none;
+  color: #fff;
+  border-radius: 50px;
+  padding: 0.2rem 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+
+  &:hover {
+    background: v.$main-green;
+  }
+}
+
+.more {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  &:hover {
+    color: v.$main-green;
+  }
+}
