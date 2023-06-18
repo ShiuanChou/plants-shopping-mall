@@ -6,11 +6,17 @@ import AddToBagBtn from './AddToBagBtn';
 import Link from 'next/link';
 import { HiOutlineArrowSmallRight } from 'react-icons/hi2';
 import { useRouter } from 'next/navigation';
+import { MouseEvent } from 'react';
 
 function ProductCard({ props }: { props: ProductsInterface }) {
   const router = useRouter();
+
+  const handlePage = () => {
+    router.push(`/products/${props.id}`);
+  }
+
   return (
-    <article className={styles.productCard} onClick={() => router.push(`/products/${props.id}`)}>
+    <article className={styles.productCard} onClick={() => handlePage()}>
       <div className={styles.plantImg}>
         <img src={`/images/${props.name}.png`} alt={props.name} />
       </div>

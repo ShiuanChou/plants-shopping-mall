@@ -1,6 +1,6 @@
 import Navbar from '@/components/layouts/Navbar';
-import './_globals.scss';
 import Footer from '@/components/layouts/Footer';
+import './_globals.scss';
 
 export const metadata = {
   title: '日日靜好',
@@ -19,7 +19,9 @@ export default function RootLayout({
       </head>
       <body suppressHydrationWarning={true} >
         <Navbar />
-        {children}
+        <main>
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

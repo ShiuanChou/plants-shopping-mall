@@ -17,13 +17,13 @@ export default function PlantDetail({ params }: { params: { plant: string } }) {
     }, [params, detail]);
 
     return (
-        <section className={styles.container}>
-            <div className={`${styles.wrap} ${styles.plantBg}`}>
+        <article className={styles.container}>
+            <section className={`${styles.wrap} ${styles.plantBg}`}>
                 <div className={styles.content}>
                     <img src={`/images/${detail?.name}.png`} alt={detail?.name} />
                 </div>
-            </div>
-            <div className={`${styles.wrap} ${styles.title}`}>
+            </section>
+            <section className={`${styles.wrap} ${styles.title}`}>
                 <div className={styles.content}>
                     <h1 className={styles.title}>{detail?.name}</h1>
                     <span className={styles.price}>NT$ {detail?.price}</span>
@@ -33,7 +33,7 @@ export default function PlantDetail({ params }: { params: { plant: string } }) {
                         <span>剩餘數量：{detail?.available}</span>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </article>
     )
 }
