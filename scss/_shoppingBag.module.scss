@@ -1,0 +1,102 @@
+@use "@/scss/base/variables" as v;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: auto;
+  padding: 1rem v.$layout-spacing;
+  margin: 5rem 0;
+
+  h2 {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 2rem 0;
+  }
+
+  .bagList {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: calc(25% - 2rem);
+    margin: 0 1rem 5rem 1rem;
+
+    .bagImg {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: v.$light-gray;
+      width: 100%;
+      padding: 2rem;
+
+      img {
+        width: auto;
+        height: 300px;
+        transform: scale(1.1);
+      }
+    }
+
+    .info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 1rem 0 0.5rem 0;
+      font-size: v.$medium-size;
+
+      .price {
+        color: v.$dark-gray;
+      }
+    }
+
+    .function {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+
+      .count {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .decrement,
+        .increment {
+          cursor: pointer;
+
+          &:hover {
+            color: v.$main-green;
+          }
+        }
+
+        .num {
+          margin: 0 1rem;
+        }
+      }
+
+      .remove {
+        cursor: pointer;
+
+        &:hover {
+          color: red;
+        }
+      }
+    }
+  }
+}
+
+.total {
+  display: flex;
+  justify-content: flex-end;
+  width: 100vw;
+  padding: 2rem 10rem;
+  background: #ffffffe9;
+  position: fixed;
+  bottom: 0;
+  font-weight: bold;
+  font-size: v.$medium-size;
+}

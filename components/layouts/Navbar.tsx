@@ -15,10 +15,10 @@ export default function Navbar() {
             <div className={styles.function}>
                 <Link href={'/products'}>日日盆栽</Link>
                 <Link href={'/'}>運送方式</Link>
-                <div className={styles.shoppingBag}>
+                <Link href={'/my-bag'} className={styles.shoppingBag}>
                     <SlBag className={styles.icon} />
                     <span className={styles.count}>0</span>
-                </div>
+                </Link>
             </div>
         </nav>
     )
