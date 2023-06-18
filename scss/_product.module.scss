@@ -71,22 +71,22 @@
 
     .price {
       margin: 0.1rem 0 0.8rem 0;
-      color: #868686;
+      color: v.$dark-gray;
     }
   }
 }
 
 .addToBag {
-  background: v.$light-green;
-  border: none;
-  color: #fff;
-  border-radius: 50px;
-  padding: 0.2rem 0.5rem;
+  background: transparent;
+  border: 1px solid v.$light-green;
+  color: v.$light-green;
+  padding: 0.2rem 1rem;
   cursor: pointer;
   transition: all 0.3s ease-out;
 
   &:hover {
     background: v.$main-green;
+    color: #fff;
   }
 }
 

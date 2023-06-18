@@ -21,8 +21,9 @@
 
     a {
       display: flex;
+      text-align: right;
       align-items: center;
-      margin-right: 2rem;
+      margin-left: 2rem;
 
       &:hover {
         color: v.$main-green;
