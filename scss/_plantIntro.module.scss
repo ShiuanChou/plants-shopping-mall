@@ -1,4 +1,5 @@
 @use "@/scss/base/variables" as v;
+@import "@/scss/base/mixin";
 
 .container {
   width: 100vw;
@@ -6,6 +7,9 @@
   padding: 0 v.$layout-spacing;
   display: flex;
   overflow: hidden;
+  @include laptops {
+    padding: 0 2rem;
+  }
 
   .wrap {
     width: calc(100% / 3);
@@ -14,11 +18,14 @@
 
     &.title {
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: flex-end;
 
       .content {
         font-size: 50px;
         margin-top: 7rem;
+        position: absolute;
+        top: 0;
+        z-index: 1;
 
         h1 {
           color: v.$main-green;
@@ -41,6 +48,9 @@
       position: relative;
       user-select: none;
       padding: 0;
+      @include laptops {
+        width: 50%;
+      }
 
       .content {
         position: absolute;

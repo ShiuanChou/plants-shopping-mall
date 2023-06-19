@@ -1,4 +1,5 @@
 @use "@/scss/base/variables" as v;
+@import "@/scss/base/mixin";
 
 .container {
   width: 100vw;
@@ -6,6 +7,9 @@
   padding: v.$layout-spacing;
   display: flex;
   overflow: hidden;
+  @include laptops {
+    padding: 2rem;
+  }
 
   .wrap {
     width: calc(100% / 2);
@@ -53,6 +57,9 @@
       img {
         width: auto;
         height: 80vh;
+        @include laptops {
+          height: 50vh;
+        }
       }
     }
   }

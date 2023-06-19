@@ -1,4 +1,5 @@
 @use "../base/variables" as v;
+@import "@/scss/base/mixin";
 
 .container {
   position: fixed;
@@ -8,6 +9,9 @@
   align-items: center;
   padding: 2rem v.$layout-spacing;
   z-index: 1000;
+  @include laptops {
+    padding: 2rem;
+  }
 
   .logo {
     font-size: v.$large-size;
