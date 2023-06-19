@@ -1,11 +1,11 @@
 import styles from '@/scss/_plantIntro.module.scss';
-import { productsData } from '@/public/products';
 import { SlSocialInstagram, SlSocialFacebook, SlSocialYoutube } from 'react-icons/sl';
 import { HiOutlineArrowSmallRight } from "react-icons/hi2";
 import Link from 'next/link';
+import data from '@/app/products/products.json';
 
 export default function Landing() {
-    const monthlyNew = productsData.find(plant => plant.monthlyNews === true);
+    const monthlyNew = data.find(plant => plant.monthlyNews === true);
 
     return (
         <section className={styles.container}>

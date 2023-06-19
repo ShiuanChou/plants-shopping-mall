@@ -6,4 +6,9 @@ export interface ProductsInterface {
     price: number,
     available: number,
     monthlyNews: boolean,
-  }
+}
+
+export interface BagItemInterface {
+  product: ProductsInterface;
+  count: number;
+}

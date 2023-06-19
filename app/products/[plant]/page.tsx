@@ -1,19 +1,17 @@
 "use client"
 
 import styles from '@/scss/_detail.module.scss';
-import { productsData } from '@/public/products';
-import { SlSocialInstagram, SlSocialFacebook, SlSocialYoutube } from 'react-icons/sl';
-import { HiOutlineArrowSmallRight } from "react-icons/hi2";
-import Link from 'next/link';
+import data from '@/app/products/products.json';
 import { useEffect, useState } from 'react';
 import AddToBagBtn from '@/components/AddToBagBtn';
+import { ProductsInterface } from '@/types/product.interface';
 
 export default function PlantDetail({ params }: { params: { plant: string } }) {
-    const [detail, setDetail] = useState({});
+    const [detail, setDetail] = useState<ProductsInterface>();
 
     useEffect(() => {
-        const data = productsData.find(data => data.id.toString() === params.plant)
-        setDetail(data ? data : {});
+        const products = data.find(data => data.id.toString() === params.plant)
+        setDetail(products);
     }, [params, detail]);
 
     return (
@@ -29,7 +27,7 @@ export default function PlantDetail({ params }: { params: { plant: string } }) {
                     <span className={styles.price}>NT$ {detail?.price}</span>
                     <p className={styles.description}>{detail?.description}</p>
                     <div className={styles.foot}>
-                        <AddToBagBtn id={detail?.id} />
+                        <AddToBagBtn product={detail ? detail : {}} />
                         <span>剩餘數量：{detail?.available}</span>
                     </div>
                 </div>

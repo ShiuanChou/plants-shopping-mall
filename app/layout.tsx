@@ -1,6 +1,9 @@
+"use client"
+
 import Navbar from '@/components/layouts/Navbar';
 import Footer from '@/components/layouts/Footer';
 import './_globals.scss';
+import Providers from '@/components/Providers';
 
 export const metadata = {
   title: '日日靜好',
@@ -15,14 +18,16 @@ export default function RootLayout({
   return (
     <html lang="zh-Hant">
       <head>
-        <link rel='icon' href='/public/favicon.ico' />
+        <title>日日靜好</title>
       </head>
       <body suppressHydrationWarning={true} >
-        <Navbar />
-        <main>
-          {children}
-        </main>
-        <Footer />
+        <Providers>
+          <Navbar />
+          <main>
+            {children}
+          </main>
+          <Footer />
+        </Providers>
       </body>
     </html>
   )

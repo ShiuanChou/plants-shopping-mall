@@ -24,7 +24,7 @@ function ProductCard({ props }: { props: ProductsInterface }) {
         {props.monthlyNews && <span className={styles.news}>本月新品</span>}
         <h2>{props.name}</h2>
         <p className={styles.price}>NT$ {props.price}</p>
-        <AddToBagBtn id={props} />
+        <AddToBagBtn product={props} />
       </div>
     </article>
   )

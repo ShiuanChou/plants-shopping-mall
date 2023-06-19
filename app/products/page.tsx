@@ -1,8 +1,8 @@
 import ProductList from "@/components/ProductList";
-import { productsData } from "@/public/products";
+import data from './products.json';
 
 export default function Products() {
     return (
-        <ProductList displayData={productsData} title={"全部盆栽"} moreBtn={false} />
+        <ProductList displayData={data} title={"全部盆栽"} moreBtn={false} />
     )
 }
