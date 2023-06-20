@@ -7,6 +7,7 @@
   padding: v.$layout-spacing;
   display: flex;
   overflow: hidden;
+
   @include laptops {
     padding: 2rem;
   }
@@ -57,6 +58,7 @@
       img {
         width: auto;
         height: 80vh;
+        
         @include laptops {
           height: 50vh;
         }

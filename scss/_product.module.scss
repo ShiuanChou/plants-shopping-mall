@@ -8,8 +8,13 @@
   height: auto;
   padding: 1rem v.$layout-spacing;
   margin: 5rem 0;
+
   @include laptops {
     padding: 1rem 2rem;
+  }
+
+  @include pad {
+    margin: 2rem 0;
   }
 
   .wrap {
@@ -36,9 +41,14 @@
   width: calc(33% - 1rem);
   overflow: hidden;
   height: 200px;
+
   @include laptops {
     min-width: calc(50% - 1rem);
     width: calc(50% - 1rem);
+  }
+  
+  @include mobile {
+    width: calc(100% - 1rem);
   }
 
   &.productCard:hover .plantImg > img {

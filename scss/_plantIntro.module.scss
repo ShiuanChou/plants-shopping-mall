@@ -7,8 +7,19 @@
   padding: 0 v.$layout-spacing;
   display: flex;
   overflow: hidden;
+  position: relative;
+
   @include laptops {
     padding: 0 2rem;
+  }
+  
+  @include pad {
+    flex-wrap: wrap;
+    height: auto;
+  }
+
+  @include mobile {
+    font-size: v.$regular-size;
   }
 
   .wrap {
@@ -20,20 +31,38 @@
       flex-direction: column;
       justify-content: flex-end;
 
+      @include pad {
+        width: 60%;
+      }
+
+      @include mobile {
+        padding-top: 4rem;
+        padding-bottom: 0;
+      }
+
       .content {
         font-size: 50px;
-        margin-top: 7rem;
+        margin-top: 20%;
         position: absolute;
         top: 0;
         z-index: 1;
 
+        @include mobile {
+          font-size: 20px;
+        }
+
         h1 {
           color: v.$main-green;
+        }
+
+        @include pad {
+          position: relative;
         }
       }
 
       .social {
         font-size: 20px;
+        margin-top: 2rem;
 
         svg {
           margin-right: 1rem;
@@ -43,35 +72,57 @@
 
     &.plantBg {
       background: linear-gradient(#f3f3f3 90%, #fff);
+      display: flex;
       align-items: flex-end;
       color: transparent;
-      position: relative;
       user-select: none;
       padding: 0;
-      @include laptops {
-        width: 50%;
+      position: relative;
+
+      @include pad {
+        width: 40%;
       }
 
       .content {
         position: absolute;
         padding-bottom: 3rem;
-        box-sizing: border-box;
+
+        @include pad {
+          position: relative;
+          padding: 0;
+        }
       }
 
       img {
         width: 100%;
         transform: scale(1.2);
         height: auto;
+
+        @include pad {
+          transform: scale(1);
+        }
       }
     }
 
     &.subTitle {
       align-items: flex-end;
 
+      @include pad {
+        width: 100%;
+      }
+
+      @include mobile {
+        padding-bottom: 0;
+      }
+
       .content {
         padding: 0 0 0 2rem;
         width: 100%;
         font-size: v.$medium-size;
+
+        @include pad {
+          padding: 0;
+        }
 
         .news {
           color: v.$main-green;
